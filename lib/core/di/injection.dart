@@ -30,6 +30,7 @@ final GetIt getIt = GetIt.instance;
 
 // Simple dependency setup for existing services
 Future<void> setupDependencies() async {
+  await _registerFirebase();
   _registerServices();
   _registerUtilities();
 }
