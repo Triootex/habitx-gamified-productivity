@@ -1,0 +1,247 @@
+name: habitx
+description: "HabitX - Gamified Productivity RPG App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core UI
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.10+1
+  lottie: ^3.1.2
+  rive: ^0.13.13
+  
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  
+  # Dependency Injection
+  get_it: ^8.0.0
+  injectable: ^2.4.4
+  
+  # Firebase
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+  firebase_storage: ^12.3.2
+  firebase_analytics: ^11.3.3
+  firebase_crashlytics: ^4.1.3
+  firebase_remote_config: ^5.1.3
+  firebase_messaging: ^15.1.3
+  
+  # Google Services
+  google_sign_in: ^6.2.1
+  google_mobile_ads: ^5.1.0
+  
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.3.2
+  sqflite: ^2.3.3+1
+  
+  # Networking
+  dio: ^5.7.0
+  http: ^1.2.2
+  
+  # Utils
+  intl: ^0.19.0
+  json_annotation: ^4.9.0
+  uuid: ^4.5.1
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  
+  # Notifications & Background
+  flutter_local_notifications: ^17.2.3
+  workmanager: ^0.5.2
+  
+  # Charts & Visualization
+  fl_chart: ^0.70.1
+  
+  # Device & Sensors
+  geolocator: ^13.0.1
+  sensors_plus: ^6.0.1
+  device_info_plus: ^10.1.2
+  package_info_plus: ^8.1.0
+  
+  # Audio & Media
+  audioplayers: ^6.1.0
+  just_audio: ^0.9.40
+  
+  # Camera & Images
+  image_picker: ^1.1.2
+  cached_network_image: ^3.4.1
+  
+  # Permissions (Enhanced)
+  permission_handler: ^11.3.1
+  
+  # Social & Sharing
+  share_plus: ^10.0.2
+  url_launcher: ^6.3.1
+  
+  # Health & Fitness
+  health: ^10.2.0
+  
+  # In-App Purchases
+  in_app_purchase: ^3.2.0
+  
+  # Speech & Text
+  speech_to_text: ^7.0.0
+  
+  # Crypto & Security
+  crypto: ^3.0.5
+  
+  # Date & Time
+  timezone: ^0.9.4
+  
+  # Animation and UI packages
+  flutter_animate: ^4.5.0
+  
+  # PDF Generation
+  pdf: ^3.11.1
+  
+  # Barcode Scanning
+  mobile_scanner: ^5.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  
+  # Code Generation
+  build_runner: ^2.4.13
+  json_serializable: ^6.8.0
+  riverpod_generator: ^2.4.0
+  injectable_generator: ^2.6.2
+  hive_generator: ^2.0.1
+  
+  # Testing
+  mockito: ^5.4.4
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/sounds/
+    - assets/lottie/
+    - assets/rive/
+    - assets/animations/
+    - assets/fonts/
+    # Real Web Assets
+    # ICONS
+    - assets/icons/task_icon.png
+    - assets/icons/timer_icon.png
+    - assets/icons/goal_icon.png
+    - assets/icons/project_icon.png
+    - assets/icons/analytics_icon.png
+    - assets/icons/pomodoro_icon.png
+    - assets/icons/heart_icon.png
+    - assets/icons/meditation_icon.png
+    - assets/icons/fitness_icon.png
+    - assets/icons/sleep_icon.png
+    - assets/icons/nutrition_icon.png
+    - assets/icons/water_icon.png
+    - assets/icons/mood_icon.png
+    - assets/icons/exercise_icon.png
+    - assets/icons/brain_icon.png
+    - assets/icons/mindfulness_icon.png
+    - assets/icons/stress_icon.png
+    - assets/icons/focus_icon.png
+    - assets/icons/gratitude_icon.png
+    - assets/icons/breathing_icon.png
+    - assets/icons/community_icon.png
+    - assets/icons/challenge_icon.png
+    - assets/icons/leaderboard_icon.png
+    - assets/icons/share_icon.png
+    - assets/icons/achievement_icon.png
+    - assets/icons/group_icon.png
+    - assets/icons/book_icon.png
+    - assets/icons/skill_icon.png
+    - assets/icons/course_icon.png
+    - assets/icons/language_icon.png
+    - assets/icons/creative_icon.png
+    - assets/icons/knowledge_icon.png
+    - assets/icons/calendar_icon.png
+    - assets/icons/reminder_icon.png
+    - assets/icons/notes_icon.png
+    - assets/icons/files_icon.png
+    - assets/icons/contacts_icon.png
+    - assets/icons/travel_icon.png
+    # IMAGES
+    - assets/images/productivity_bg.jpg
+    - assets/images/health_bg.jpg
+    - assets/images/wellness_bg.jpg
+    - assets/images/mindfulness_bg.jpg
+    - assets/images/social_bg.jpg
+    - assets/images/learning_bg.jpg
+    - assets/images/dashboard_hero.jpg
+    - assets/images/task_management.jpg
+    - assets/images/meditation_scene.jpg
+    - assets/images/fitness_activity.jpg
+    - assets/images/study_environment.jpg
+    - assets/images/community_gathering.jpg
+    - assets/images/mascot_happy.png
+    - assets/images/mascot_working.png
+    - assets/images/mascot_celebrating.png
+    - assets/images/mascot_meditating.png
+    - assets/images/mascot_exercising.png
+    - assets/images/mascot_sleeping.png
+    # SOUNDS
+    - assets/sounds/task_complete.mp3
+    - assets/sounds/goal_achieved.mp3
+    - assets/sounds/timer_alert.mp3
+    - assets/sounds/meditation_bell.mp3
+    - assets/sounds/level_up.mp3
+    - assets/sounds/achievement_unlock.mp3
+    - assets/sounds/focus_ambient.mp3
+    - assets/sounds/meditation_ambient.mp3
+    - assets/sounds/productivity_ambient.mp3
+    - assets/sounds/wellness_chime.mp3
+    - assets/sounds/button_tap.mp3
+    - assets/sounds/toggle_on.mp3
+    - assets/sounds/toggle_off.mp3
+    - assets/sounds/swipe_sound.mp3
+    # Real Lottie MCP Animations
+    - assets/lottie/rocket.json
+    - assets/lottie/loading_spinner.json
+    - assets/lottie/working_hours.json
+    - assets/lottie/meditation.json
+    - assets/lottie/success_celebration.json
+    # Real Rive Animations
+    - assets/rive/download_button.riv
+    - assets/rive/download_progress_bar.riv
+    - assets/rive/progress_bar_clean.riv
+    - assets/rive/progress_bar_gradient.riv
+    - assets/rive/mascot_flying.riv
+    - assets/rive/avatar_pack.riv
+    - assets/rive/loading_collection.riv
+    - assets/rive/download_icon.riv
+
+    
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700

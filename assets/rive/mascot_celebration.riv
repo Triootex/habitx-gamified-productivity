@@ -1,0 +1,7 @@
+# This is a placeholder for the Rive mascot celebration animation
+# In a real project, this would be a binary .riv file created in Rive Editor
+# The file would contain:
+# - Mascot jumping with joy
+# - Confetti particles
+# - Celebration dance moves
+# - State machine with trigger for celebration

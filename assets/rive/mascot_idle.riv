@@ -1,0 +1,7 @@
+# This is a placeholder for the Rive mascot idle animation
+# In a real project, this would be a binary .riv file created in Rive Editor
+# The file would contain:
+# - A cute mascot character in idle state
+# - Blinking eyes animation
+# - Subtle breathing motion
+# - State machine with idle, happy, excited states
