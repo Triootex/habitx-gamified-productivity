@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'core/firebase/firebase_options.dart';
 import 'core/di/injection.dart';
 import 'presentation/app/fully_animated_habitx_app.dart';
 
