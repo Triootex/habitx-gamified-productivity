@@ -1,13 +1,10 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import '../permissions/permission_manager.dart';
-import 'injection.config.dart';
 
 // Import all existing services
 import '../../data/services/task_service_impl.dart';
 import '../../data/services/habit_service_impl.dart';
-import '../../data/services/user_service_impl.dart';
-import '../../data/services/auth_service_impl.dart';
 import '../../data/services/notification_service_impl.dart';
 import '../../data/services/achievement_engine_impl.dart';
 import '../../data/services/reward_calculator_impl.dart';
@@ -27,47 +24,6 @@ import '../../data/services/language_service_impl.dart';
 import '../../data/services/focus_service_impl.dart';
 import '../../data/services/flashcards_service_impl.dart';
 import '../../data/services/budget_service_impl.dart';
-
-// Import all existing repositories
-import '../../data/repositories/task_repository_impl.dart';
-import '../../data/repositories/habit_repository_impl.dart';
-import '../../data/repositories/user_repository_impl.dart';
-import '../../data/repositories/analytics_repository_impl.dart';
-import '../../data/repositories/career_repository_impl.dart';
-import '../../data/repositories/creativity_repository_impl.dart';
-import '../../data/repositories/mental_health_repository_impl.dart';
-import '../../data/repositories/meditation_repository_impl.dart';
-import '../../data/repositories/meals_repository_impl.dart';
-import '../../data/repositories/marketplace_repository_impl.dart';
-import '../../data/repositories/language_repository_impl.dart';
-import '../../data/repositories/journal_repository_impl.dart';
-import '../../data/repositories/focus_repository_impl.dart';
-import '../../data/repositories/flashcards_repository_impl.dart';
-import '../../data/repositories/fitness_repository_impl.dart';
-import '../../data/repositories/budget_repository_impl.dart';
-import '../../data/repositories/subscription_repository_impl.dart';
-import '../../data/repositories/social_repository_impl.dart';
-import '../../data/repositories/sleep_repository_impl.dart';
-import '../../data/repositories/reading_repository_impl.dart';
-
-// Import use cases
-import '../../domain/usecases/task_usecases.dart';
-import '../../domain/usecases/habit_usecases.dart';
-import '../../domain/usecases/user_usecases.dart';
-import '../../domain/usecases/fitness_usecases.dart';
-import '../../domain/usecases/meditation_usecases.dart';
-import '../../domain/usecases/journal_usecases.dart';
-import '../../domain/usecases/social_usecases.dart';
-import '../../domain/usecases/marketplace_usecases.dart';
-import '../../domain/usecases/subscription_usecases.dart';
-import '../../domain/usecases/mental_health_usecases.dart';
-import '../../domain/usecases/sleep_usecases.dart';
-import '../../domain/usecases/reading_usecases.dart';
-import '../../domain/usecases/meals_usecases.dart';
-import '../../domain/usecases/language_usecases.dart';
-import '../../domain/usecases/focus_usecases.dart';
-import '../../domain/usecases/flashcards_usecases.dart';
-import '../../domain/usecases/budget_usecases.dart';
 
 final GetIt getIt = GetIt.instance;
 
