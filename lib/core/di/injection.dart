@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import '../permissions/permission_manager.dart';
+import '../firebase/firebase_manager.dart';
 
 // Import all existing services
 import '../../data/services/task_service_impl.dart';
