@@ -8,9 +8,11 @@ import 'presentation/app/fully_animated_habitx_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  // Initialize Firebase
-  await Firebase.initializeApp();
+
+  // Initialize Firebase with default options
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   
   // Setup dependency injection
   await setupDependencies();
