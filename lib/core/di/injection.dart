@@ -60,6 +60,13 @@ void _registerServices() {
   getIt.registerLazySingleton<BudgetService>(() => BudgetServiceImpl());
 }
 
+Future<void> _registerFirebase() async {
+  // Register and initialize Firebase Manager
+  final firebaseManager = FirebaseManager();
+  await firebaseManager.initialize();
+  getIt.registerLazySingleton<FirebaseManager>(() => firebaseManager);
+}
+
 void _registerUtilities() {
   // Register utility classes and managers
   getIt.registerLazySingleton<PermissionManager>(() => PermissionManager());
