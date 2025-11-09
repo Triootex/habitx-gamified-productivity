@@ -27,59 +27,16 @@ import '../../data/services/budget_service_impl.dart';
 
 final GetIt getIt = GetIt.instance;
 
-@InjectableInit()
-Future<void> configureDependencies() async => getIt.init();
-
-// Manual registration for complex dependencies
+// Simple dependency setup for existing services
 Future<void> setupDependencies() async {
-  await configureDependencies();
-
-  // Register additional dependencies that need manual setup
-  _registerDataSources();
-  _registerRepositories();
   _registerServices();
-  _registerEngines();
-  _registerUseCases();
   _registerUtilities();
 }
 
-void _registerDataSources() {
-  // Register Firebase and network clients
-  // Note: These will be implemented when Firebase is configured
-  // getIt.registerLazySingleton<FirebaseManager>(() => FirebaseManagerImpl());
-  // getIt.registerLazySingleton<NetworkClient>(() => NetworkClientImpl());
-}
-
-void _registerRepositories() {
-  // Register all repository implementations
-  getIt.registerLazySingleton<TaskRepository>(() => TaskRepositoryImpl());
-  getIt.registerLazySingleton<HabitRepository>(() => HabitRepositoryImpl());
-  getIt.registerLazySingleton<UserRepository>(() => UserRepositoryImpl());
-  getIt.registerLazySingleton<AnalyticsRepository>(() => AnalyticsRepositoryImpl());
-  getIt.registerLazySingleton<CareerRepository>(() => CareerRepositoryImpl());
-  getIt.registerLazySingleton<CreativityRepository>(() => CreativityRepositoryImpl());
-  getIt.registerLazySingleton<MentalHealthRepository>(() => MentalHealthRepositoryImpl());
-  getIt.registerLazySingleton<MeditationRepository>(() => MeditationRepositoryImpl());
-  getIt.registerLazySingleton<MealsRepository>(() => MealsRepositoryImpl());
-  getIt.registerLazySingleton<MarketplaceRepository>(() => MarketplaceRepositoryImpl());
-  getIt.registerLazySingleton<LanguageRepository>(() => LanguageRepositoryImpl());
-  getIt.registerLazySingleton<JournalRepository>(() => JournalRepositoryImpl());
-  getIt.registerLazySingleton<FocusRepository>(() => FocusRepositoryImpl());
-  getIt.registerLazySingleton<FlashcardsRepository>(() => FlashcardsRepositoryImpl());
-  getIt.registerLazySingleton<FitnessRepository>(() => FitnessRepositoryImpl());
-  getIt.registerLazySingleton<BudgetRepository>(() => BudgetRepositoryImpl());
-  getIt.registerLazySingleton<SubscriptionRepository>(() => SubscriptionRepositoryImpl());
-  getIt.registerLazySingleton<SocialRepository>(() => SocialRepositoryImpl());
-  getIt.registerLazySingleton<SleepRepository>(() => SleepRepositoryImpl());
-  getIt.registerLazySingleton<ReadingRepository>(() => ReadingRepositoryImpl());
-}
-
 void _registerServices() {
-  // Register all service implementations
+  // Register all service implementations that exist
   getIt.registerLazySingleton<TaskService>(() => TaskServiceImpl());
   getIt.registerLazySingleton<HabitService>(() => HabitServiceImpl());
-  getIt.registerLazySingleton<UserService>(() => UserServiceImpl());
-  getIt.registerLazySingleton<AuthService>(() => AuthServiceImpl());
   getIt.registerLazySingleton<NotificationService>(() => NotificationServiceImpl());
   getIt.registerLazySingleton<AchievementEngine>(() => AchievementEngineImpl());
   getIt.registerLazySingleton<RewardCalculator>(() => RewardCalculatorImpl());
@@ -99,66 +56,6 @@ void _registerServices() {
   getIt.registerLazySingleton<FocusService>(() => FocusServiceImpl());
   getIt.registerLazySingleton<FlashcardsService>(() => FlashcardsServiceImpl());
   getIt.registerLazySingleton<BudgetService>(() => BudgetServiceImpl());
-}
-
-void _registerEngines() {
-  // Register specialized engines
-  // Note: These are already registered above as services since they implement service interfaces
-}
-
-void _registerUseCases() {
-  // Register all use case implementations
-  getIt.registerLazySingleton<TaskUseCases>(() => TaskUseCases(
-    repository: getIt<TaskRepository>(),
-  ));
-  getIt.registerLazySingleton<HabitUseCases>(() => HabitUseCases(
-    repository: getIt<HabitRepository>(),
-  ));
-  getIt.registerLazySingleton<UserUseCases>(() => UserUseCases(
-    repository: getIt<UserRepository>(),
-  ));
-  getIt.registerLazySingleton<FitnessUseCases>(() => FitnessUseCases(
-    repository: getIt<FitnessRepository>(),
-  ));
-  getIt.registerLazySingleton<MeditationUseCases>(() => MeditationUseCases(
-    repository: getIt<MeditationRepository>(),
-  ));
-  getIt.registerLazySingleton<JournalUseCases>(() => JournalUseCases(
-    repository: getIt<JournalRepository>(),
-  ));
-  getIt.registerLazySingleton<SocialUseCases>(() => SocialUseCases(
-    repository: getIt<SocialRepository>(),
-  ));
-  getIt.registerLazySingleton<MarketplaceUseCases>(() => MarketplaceUseCases(
-    repository: getIt<MarketplaceRepository>(),
-  ));
-  getIt.registerLazySingleton<SubscriptionUseCases>(() => SubscriptionUseCases(
-    repository: getIt<SubscriptionRepository>(),
-  ));
-  getIt.registerLazySingleton<MentalHealthUseCases>(() => MentalHealthUseCases(
-    repository: getIt<MentalHealthRepository>(),
-  ));
-  getIt.registerLazySingleton<SleepUseCases>(() => SleepUseCases(
-    repository: getIt<SleepRepository>(),
-  ));
-  getIt.registerLazySingleton<ReadingUseCases>(() => ReadingUseCases(
-    repository: getIt<ReadingRepository>(),
-  ));
-  getIt.registerLazySingleton<MealsUseCases>(() => MealsUseCases(
-    repository: getIt<MealsRepository>(),
-  ));
-  getIt.registerLazySingleton<LanguageUseCases>(() => LanguageUseCases(
-    repository: getIt<LanguageRepository>(),
-  ));
-  getIt.registerLazySingleton<FocusUseCases>(() => FocusUseCases(
-    repository: getIt<FocusRepository>(),
-  ));
-  getIt.registerLazySingleton<FlashcardsUseCases>(() => FlashcardsUseCases(
-    repository: getIt<FlashcardsRepository>(),
-  ));
-  getIt.registerLazySingleton<BudgetUseCases>(() => BudgetUseCases(
-    repository: getIt<BudgetRepository>(),
-  ));
 }
 
 void _registerUtilities() {
